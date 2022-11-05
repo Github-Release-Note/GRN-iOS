@@ -6,6 +6,6 @@ let project = Project.makeModule(
     name: "RootFeature",
     product: .staticFramework,
     dependencies: [
-        
+        .Project.Feature.CommonFeature
     ]
 )
