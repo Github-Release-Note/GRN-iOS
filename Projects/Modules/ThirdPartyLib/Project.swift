@@ -5,5 +5,9 @@ import UtilityPlugin
 let project = Project.makeModule(
     name: "ThirdPartyLib",
     product: .staticFramework,
-    dependencies: []
+    dependencies: [
+        .SPM.tca,
+        .SPM.realm,
+        .SPM.realmSwift
+    ]
 )
