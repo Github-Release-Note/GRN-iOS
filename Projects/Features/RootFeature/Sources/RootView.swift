@@ -1,5 +1,7 @@
 import SwiftUI
 import ComposableArchitecture
+import JiHoonSwiftExt_SwiftUI
+import DesignSystem
 
 public struct RootView: View {
     // MARK: - Properties
@@ -10,6 +12,19 @@ public struct RootView: View {
     }
     // MARK: - View
     public var body: some View {
-        Text("Hello")
+        WithViewStore(store) { viewStore in
+            NavigationView {
+                GeometryReader { geometry in
+                    let screenHeight = geometry.size.height + geometry.safeAreaInsets.top + geometry.safeAreaInsets.bottom
+                    let imageOffset = screenHeight + 36
+                    
+                    ZStack {
+                        Color.GRN.background.color.ignoresSafeArea()
+                        
+                    }
+                }
+                .navigationBarHidden(true)
+            }
+        }
     }
 }

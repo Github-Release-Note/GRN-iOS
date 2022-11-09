@@ -8,6 +8,7 @@ let project = Project.makeModule(
     dependencies: [
         .SPM.tca,
         .SPM.realm,
-        .SPM.realmSwift
+        .SPM.realmSwift,
+        .SPM.jihoonSu
     ]
 )
