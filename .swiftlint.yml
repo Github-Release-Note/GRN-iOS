@@ -1,0 +1,55 @@
+disabled_rules: # 실행에서 제외할 룰 식별자들
+    - mark # 표시
+    - comment_spacing # 주석 간격
+    - nesting # 중첩
+
+opt_in_rules: #비활성화 되어있지만 활성화하고 싶은 규칙
+    - empty_count # .count == 0보다는 .isEmpty가 좋습니다
+    - empty_string # 빈 String 문자열과 비교하는 것 보다는 .isEmpty를 사용하는 것이 좋습니다.
+    - superfluous_disable_command #불필요한 비활성화 명령어
+    - private_over_fileprivate #fileprivate 보다 private
+    - missing_docs # 누락된 문서
+    
+included: # 린트 과정에 포함할 파일 경로. 이 항목이 존재하면 `--path`는 무시됨
+    #- ProjectName/Sources
+    
+excluded: # 린트 과정에서 무시할 파일 경로. `included`보다 우선순위 높음
+    - Pods
+    - Carthage
+    - R.generated.swift #R.swift
+    - .build # where Swift Package Manager checkouts out dependency sources
+    #- ProjectName/AppDelegate.swift
+    #- ProjectName/SceneDelegate.swift
+
+force_cast: warning # 암시적 지정
+force_try:
+    severity: warning # 명시적 지정
+
+line_length: 110
+
+type_body_length:
+    - 300 # 경고
+    - 400 # 에러
+
+type_name:
+  min_length: 4 # 경고에만 적용됨
+  max_length: # 경고와 에러 둘 다 적용
+    warning: 40
+    error: 50
+  excluded: iPhone # 제외할 문자열 값 사용
+
+file_length:
+    warning: 500
+    error: 1200
+
+function_body_length:
+    warning: 100
+    error: 200
+
+identifier_name:
+    min_length:
+     error : 4 # 에러만 적용
+    excluded: # excluded via string array
+    - id
+    
+reporter: "xcode" # 보고 유형 (xcode, json, csv, checkstyle, junit, html, emoji, markdown)

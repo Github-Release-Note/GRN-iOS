@@ -17,10 +17,8 @@ public struct RootView: View {
                 GeometryReader { geometry in
                     let screenHeight = geometry.size.height + geometry.safeAreaInsets.top + geometry.safeAreaInsets.bottom
                     let imageOffset = screenHeight + 36
-                    
                     ZStack {
                         Color.GRN.background.color.ignoresSafeArea()
-                        
                     }
                 }
                 .navigationBarHidden(true)
