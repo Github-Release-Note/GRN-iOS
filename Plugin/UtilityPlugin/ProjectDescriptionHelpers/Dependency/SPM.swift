@@ -5,6 +5,7 @@ public extension TargetDependency.SPM {
     static let realm = TargetDependency.external(name: "Realm")
     static let realmSwift = TargetDependency.external(name: "RealmSwift")
     static let jihoonSu = TargetDependency.external(name: "JiHoonSwiftExt-SwiftUI")
+    static let scalingHeaderScrollView = TargetDependency.external(name: "ScalingHeaderScrollView")
 }
 
 public extension Package {

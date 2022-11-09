@@ -9,6 +9,7 @@ let project = Project.makeModule(
         .SPM.tca,
         .SPM.realm,
         .SPM.realmSwift,
-        .SPM.jihoonSu
+        .SPM.jihoonSu,
+        .SPM.scalingHeaderScrollView
     ]
 )

@@ -19,6 +19,9 @@ public struct RootView: View {
                     let imageOffset = screenHeight + 36
                     ZStack {
                         Color.GRN.background.color.ignoresSafeArea()
+                        ScrollView {
+                            
+                        }
                     }
                 }
                 .navigationBarHidden(true)
