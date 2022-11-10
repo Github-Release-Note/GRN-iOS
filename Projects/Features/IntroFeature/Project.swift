@@ -1,13 +1,10 @@
-import ProjectDescriptionHelpers
 import ProjectDescription
-import UtilityPlugin
+import ProjectDescriptionHelpers
 
 let project = Project.makeModule(
-    name: "RootFeature",
+    name: "IntroFeature",
     product: .staticFramework,
     dependencies: [
         .Project.Feature.CommonFeature,
-        .Project.Feature.IntroFeature,
-        .Project.Feature.MainFeature
     ]
 )

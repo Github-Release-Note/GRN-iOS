@@ -12,20 +12,8 @@ public struct RootView: View {
     }
     // MARK: - View
     public var body: some View {
-        WithViewStore(store) { viewStore in
-            NavigationView {
-                GeometryReader { geometry in
-                    let screenHeight = geometry.size.height + geometry.safeAreaInsets.top + geometry.safeAreaInsets.bottom
-                    let imageOffset = screenHeight + 36
-                    ZStack {
-                        Color.GRN.background.color.ignoresSafeArea()
-                        ScrollView {
-                            
-                        }
-                    }
-                }
-                .navigationBarHidden(true)
-            }
-        }
+//        SwitchStore(store) {
+//            CaseLet(state: /RootCore.State., action: <#T##(CaseAction) -> EnumAction#>, then: <#T##(Store<CaseState, CaseAction>) -> View#>)
+//        }
     }
 }
