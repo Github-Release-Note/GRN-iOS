@@ -1,12 +1,21 @@
 import ComposableArchitecture
+import IntroFeature
+import MainFeature
 
 public struct RootCore: ReducerProtocol {
     // MARK: - State
-    public struct State: Equatable {
-        public init() {}
+    public enum State: Equatable {
+        case intro(IntroCore.State)
+        case main(MainCore.State)
+        public init() {
+            self = .intro(.init())
+        }
     }
     // MARK: - Action
-    public enum Action: Equatable {}
+    public enum Action: Equatable {
+        case intro(IntroCore.Action)
+        case main(MainCore.Action)
+    }
     // MARK: - Core Initalizer
     public init() {}
     // MARK: - Reduce

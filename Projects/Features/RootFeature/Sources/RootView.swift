@@ -2,6 +2,8 @@ import SwiftUI
 import ComposableArchitecture
 import JiHoonSwiftExt_SwiftUI
 import DesignSystem
+import IntroFeature
+import MainFeature
 
 public struct RootView: View {
     // MARK: - Properties
@@ -12,8 +14,19 @@ public struct RootView: View {
     }
     // MARK: - View
     public var body: some View {
-//        SwitchStore(store) {
-//            CaseLet(state: /RootCore.State., action: <#T##(CaseAction) -> EnumAction#>, then: <#T##(Store<CaseState, CaseAction>) -> View#>)
-//        }
+        SwitchStore(self.store) {
+            CaseLet(state: /RootCore.State.intro, action: RootCore.Action.intro) { store in
+                NavigationView {
+                    IntroView(store: store)
+                }
+                .navigationTitle("Intro")
+            }
+            CaseLet(state: /RootCore.State.main, action: RootCore.Action.main) { store in
+                NavigationView {
+                    MainView(store: store)
+                }
+                .navigationTitle("Main")
+            }
+        }
     }
 }
