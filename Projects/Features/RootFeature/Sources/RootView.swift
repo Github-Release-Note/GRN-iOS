@@ -30,3 +30,11 @@ public struct RootView: View {
         }
     }
 }
+
+
+// MARK: - 가설검증
+struct IntroView_Previews: PreviewProvider {
+    static var previews: some View {
+        RootView(store: Store(initialState: RootCore.State.init(), reducer: RootCore()._printChanges()))
+    }
+}

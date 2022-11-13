@@ -44,7 +44,7 @@ func make_project_file(_ feature_name : String,_ file_path: String,_ has_demo : 
     
     let project = Project.makeModule(
         name: "\(feature_name)Feature",
-        product: .staticFramework,
+        product: .framework,
         dependencies: [
             .Project.Feature.CommonFeature,
         ]\(has_demo ? ",\n  hasDemo: true" : "")
