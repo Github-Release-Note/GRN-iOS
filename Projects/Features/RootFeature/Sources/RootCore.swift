@@ -8,7 +8,7 @@ public struct RootCore: ReducerProtocol {
         case intro(IntroCore.State)
         case main(MainCore.State)
         public init() {
-            self = .intro(.init())
+            self = .main(.init())
         }
     }
     // MARK: - Action
@@ -20,6 +20,11 @@ public struct RootCore: ReducerProtocol {
     public init() {}
     // MARK: - Reduce
     public func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {}
+        switch action {
+        case .intro:
+            return .none
+        case .main:
+            return .none
+        }
     }
 }
