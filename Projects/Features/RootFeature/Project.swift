@@ -4,7 +4,7 @@ import UtilityPlugin
 
 let project = Project.makeModule(
     name: "RootFeature",
-    product: .framework,
+    product: .staticFramework,
     dependencies: [
         .Project.Feature.CommonFeature,
         .Project.Feature.IntroFeature,
